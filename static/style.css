@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+}
+
+body {
+	font-family: 'Verdana', sans-serif;
+    background-image: url("/static/img/Templo_Atena.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.calc img{
+    height: 35px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 3px;
+}
+
+.linha-container {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    color: #fffffffb;
+    margin: 4px;
+}
+
+.linha-container_2 {
+    color: rgb(250, 246, 246);
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+}
+
+.elemento {
+    color: #ffffff;
+    text-align: center;
+    font-weight: bolder;
+    margin-top: 30px;
+    cursor:pointer;
+    width: 200px;
+}
+
+.container-todos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.titulo_selecione p {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    color: #f3faf4fb;
+    margin: 4px;
+    font-weight: bolder;
+}
+
+.arma img {
+    height: 100px;
+    width: 100px;
+
+}
+
+.elemento p {
+    text-align: center;
+    font-weight: bold;
+    color:rgb(255, 255, 255);
+    border-radius: 10px;
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+
+
+button {
+    background-color: rgb(255, 94, 0);
+    border: none;
+    border-radius: 20px;
+    color: white;
+    padding: 6px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.selecionado {
+    border-radius: 20px;
+    background-image: url("https://i.pinimg.com/originals/48/e8/fe/48e8fedc1186c9ca6714cf8070861396.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(12, 12, 12, 0.788);
+    border: solid 7px rgb(155, 197, 83);
+}
+
+#dano {
+    font-weight: bolder;
+    font-weight: bold;
+    color: rgb(229, 255, 0);
+    background-color: rgba(110, 87, 201, 0.247);
+    border-radius: 10px;
+}
+
+#Seya {
+    margin-top: 90px;
+    
+}
+
+#Shiryu {
+    margin-top: 86px;
+}
+
+#Hyoga {
+    margin-top: 85px;
+}
+
+#Shun {
+    margin-top: 85px;
+}
+
+#Ikki {
+    margin-top: 85px;
+}
+

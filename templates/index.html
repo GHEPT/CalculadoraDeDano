@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculadora de Dano - RPG</title>
+        <link rel="stylesheet" type="text/css" href="/static/style.css"/>
+        <script src="/static/index.js"></script>
+    </head>
+    <body onload="start()">
+        <div class="linha-container">
+            <div class="calc">
+            <img src="/static/img/Calc_Dano.gif">
+            </div>
+            <div class="titulo">
+            <h1>Calculadora de Dano</h1>
+            </div>
+            <div class="calc">
+            <img src="/static/img/Calc_Dano.gif">
+            </div>
+        </div>
+        <div class="linha-container_2">
+            <p>Selecione uma arma para atacar</p>
+        </div>
+            <div class="container-todos">
+                <div class="CardPersonagem">
+                    <div class="elemento arma" id="Pégasus">
+                        <p>Pégasus</p>
+                        <img
+                        src="/static/img/Meteoro_Pegasus.gif"
+                        alt="Pegasus"
+                        />
+                    </div>
+                    <div class="elemento personagem" id="Seya">
+                        <p>Seya</p>
+                        <img
+                            src="/static/img/Seya_Repouso.png"
+                            alt="Seya"
+                            width="110"
+                            height="250"
+                        />
+                    </div>
+                </div>
+                <div class="CardPersonagem">
+                    <div class="elemento arma" id="Dragão">
+                        <p>Dragão</p>
+                        <img
+                        src="/static/img/Colera_Dragao.gif"
+                        alt="Dragao"
+                        />
+                    </div>
+                    <div class="elemento personagem" id="Shiryu">
+                        <p>Shiryu</p>
+                        <img
+                            src="/static/img/Shiryu_Repouso.png"
+                            alt="Shiryu"
+                            width="160"
+                            height="200"
+                        />
+                    </div>
+                </div>
+                <div class="CardPersonagem">
+                    <div class="elemento arma" id="Cisne">
+                        <p>Cisne</p>
+                        <img
+                        src="/static/img/Po_Diamante.gif"
+                        alt="Cisne"
+                        />
+                    </div>
+                    <div class="elemento personagem" id="Hyoga">
+                        <p>Hyoga</p>
+                        <img
+                            src="/static/img/Hyoga_Repouso.png"
+                            alt="Hyoga"
+                            width="76"
+                            height="174"
+                        />
+                    </div>
+                </div>
+                <div class="CardPersonagem">
+                    <div class="elemento arma" id="Andrômeda">
+                        <p>Andrômeda</p>
+                        <img
+                        src="/static/img/Corrente_Andromeda.gif"
+                        alt="Andromeda"
+                        />
+                    </div>
+                    <div class="elemento personagem" id="Shun">
+                        <p>Shun</p>
+                        <img
+                            src="/static/img/Shun_Repouso.png"
+                            alt="Shun"
+                            width="80"
+                            height="190"
+                        />
+                    </div>
+                </div>
+                <div class="CardPersonagem">
+                    <div class="elemento arma" id="Fênix">
+                        <p>Fênix</p>
+                        <img
+                        src="/static/img/Ave_Fenix.gif"
+                        alt="Fenix"
+                        />
+                    </div>
+                    <div class="elemento personagem" id="Ikki">
+                        <p>Ikki</p>
+                        <img
+                            src="/static/img/Ikki_Repouso.png"
+                            alt="Ikki"
+                            width="190"
+                            height="250"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="titulo_selecione"><p>Selecione o personagem que será atacado</p></div>
+            <div class="linha-container">
+                <span id="dano"></span>
+            </div>
+            <div class="linha-container">
+                <button id="calcular" type="button">Calcular Dano</button>
+            </div>
+        </div>
+    </body>
+</html>
