@@ -16,6 +16,34 @@ body {
     margin: 3px;
 }
 
+.imagem_poder img {
+    height: 120px;
+    width: 120px;
+    padding-top: 4px;
+    cursor: pointer;
+    border-radius: 10pt;
+}
+
+.Personagens {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    padding-top: 4px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.nome {
+    color: #ffffff;
+    font-weight: bolder;
+    text-align: center;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-color: rgba(12, 19, 13, 0.685);
+    border-radius: 20px;
+}
+
 .linha-container {
     display: flex;
     flex-flow: row;
@@ -30,50 +58,8 @@ body {
     font-weight: bold;
     display: flex;
     justify-content: center;
-    margin-top: 35px;
+    margin-top: 60px;
 }
-
-.elemento {
-    color: #ffffff;
-    text-align: center;
-    font-weight: bolder;
-    margin-top: 30px;
-    cursor:pointer;
-    width: 200px;
-}
-
-.container-todos {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-}
-
-.titulo_selecione p {
-    display: flex;
-    flex-flow: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    color: #f3faf4fb;
-    margin: 4px;
-    font-weight: bolder;
-}
-
-.arma img {
-    height: 100px;
-    width: 100px;
-
-}
-
-.elemento p {
-    text-align: center;
-    font-weight: bold;
-    color:rgb(255, 255, 255);
-    border-radius: 10px;
-    font-size: 20px;
-    margin-bottom: 6px;
-}
-
 
 button {
     background-color: rgb(255, 94, 0);
@@ -84,11 +70,20 @@ button {
     cursor: pointer;
     text-align: center;
     font-weight: bolder;
+    margin-top: 10px;
 }
 
-.selecionado {
+.CavSelect {
     border-radius: 20px;
     background-image: url("https://i.pinimg.com/originals/48/e8/fe/48e8fedc1186c9ca6714cf8070861396.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(12, 12, 12, 0.788);
+    border: solid 7px rgb(155, 197, 83);
+}
+
+.ArmaSelect {
+    border-radius: 20px;
     background-repeat: no-repeat;
     background-size: cover;
     background-color: rgba(12, 12, 12, 0.788);
@@ -101,26 +96,59 @@ button {
     color: rgb(229, 255, 0);
     background-color: rgba(110, 87, 201, 0.247);
     border-radius: 10px;
+    margin-top: 80px;
 }
 
 #Seya {
-    margin-top: 90px;
-    
+    margin-top: 60px;
+    width: 150px;
+    height: 100px;
+}
+
+#Seya img {
+    width: 110px;       
 }
 
 #Shiryu {
-    margin-top: 86px;
+    margin-top: 30px;
+    width: 150px;
+    height: 100px;
+}
+
+#Shiryu img {
+    width: 150px; 
+    height: 200px;
+         
 }
 
 #Hyoga {
-    margin-top: 85px;
+    width: 150px;
+    height: 100px;
+}
+
+#Hyoga img {
+    width: 60px; 
+    height: 160px;      
 }
 
 #Shun {
-    margin-top: 85px;
+    margin-top: 30px;
+    width: 150px;
+    height: 100px;
+}
+
+#Shun img {
+    width: 70px; 
+    height: 200px;      
 }
 
 #Ikki {
-    margin-top: 85px;
+    margin-top: 60px;
+    width: 150px;
+    height: 100px;
 }
 
+#Ikki img {
+    width: 180px;  
+    height: 270px;  
+}
