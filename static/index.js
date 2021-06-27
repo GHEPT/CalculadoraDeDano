@@ -1,84 +1,67 @@
-const vida_cavaleiros = {
-    "Seya": 60,
-    "Shiryu": 61,
-    "Hyoga": 58,
-    "Shun": 59,
-    "Ikki": 64,
-};
+var vidaPerson = null
+var poderArma = null
 
-const poderes = {
-    "Pégasus": 38,
-    "Dragão": 43,
-    "Cisne": 36,
-    "Andrômeda": 35,
-    "Fênix": 42,
-};
+function start(){
+    const armaSelecionada = document.getElementsByClassName("cardPoderes");
+        for(const arma of armaSelecionada){
+        arma.addEventListener("click", function(){
+            poderArma = this.getAttribute("data-poder");
+            if(!this.classList.contains("ArmaSelect")){
+                this.classList.add("ArmaSelect");
+            }else{
+                limparCavaleiroSelect("ArmaSelect");
+        }
+    })
+}
 
-let cavaleiros_select;
-let poderes_select;
-
-function start() {
-    const elementos = document.getElementsByClassName("elemento");
-    for (const elemento of elementos) {
-        elemento.addEventListener("click", marcarElementoSelecionado);
+    
+    const persoSelecionado = document.getElementsByClassName("cardCavaleiros");
+    for (const personagem of persoSelecionado){
+        personagem.addEventListener("click", function(){
+            vidaPerson = this.getAttribute("data-vida");
+            if(!this.classList.contains("CavSelect")){
+                this.classList.add("CavSelect");
+            }else{
+                limparCavaleiroSelect("CavSelect");
+            }
+        })
     }
+
     document.getElementById("calcular").addEventListener("click", calcularDano);
 }
 
-function marcarElementoSelecionado(evento) {//esse evento que a função recebe é o click do add.EventListener
-    const elementoSelecionado = evento.target.parentElement;//meu alvo aqui é o elemento pai 
-    if (!elementoSelecionado.classList.contains("elemento")) {//se não contém elemento na classlist elemento selecionado, ou seja, se essa classlist estiver vazia, retorna vazio.
-        return;//retorna vazio
-    }
-    const idElementoSelecionado = elementoSelecionado.getAttribute("id");
-
-    if (elementoSelecionado.classList.contains("personagem")) {//se algum personagem estiver selecionado
-        cavaleiros_select = idElementoSelecionado;//adicione o ID do personagem selecionado na variável cavaleiros_select
-        limparElementosSelecionados("personagem");//e limpo o personagem da função citada
-    }else {//se não
-        poderes_select = idElementoSelecionado;//variável recebe Id da arma selecionada
-        limparElementosSelecionados("arma");//e limpa a arma da função citada
-    }
-
-    elementoSelecionado.classList.add("selecionado");
+function limparArmaSelect(tipo){
+    const armaSelecionada = document.getElementsByClassName("cardPoderes");
+    for (const arma of armaSelecionada){
+        if(arma.classList.contains(tipo)){
+            arma.classList.remove("ArmaSelect");
+        }
+    }   
 }
 
-function calcularDano() {
-    if (!cavaleiros_select || !poderes_select) {
-        alert("Selecione um personagem e uma arma para calcular o dano");
-        return;
-    }
-
-    const danoFixo = dadosRand();
-    const danoArma = poderes[poderes_select];
-    const danoTotal = danoFixo + danoArma;
-    const vidaCavaleiros = vida_cavaleiros[cavaleiros_select];
-
-    let resultado = "Dano " + danoTotal + ".";
-
-    if (danoTotal >= vidaCavaleiros) {
-        resultado += " Parabéns! Você derrotou o " + cavaleiros_select + " com o ataque " + poderes_select +"!";
-    }else{
-        resultado += " Ops... você não derrotou o " + cavaleiros_select + ". Tente novamente!";
-    }
-
-    document.getElementById("dano").innerHTML = resultado;
-}
-
-function limparElementosSelecionados(tipo) {
-    const elementos = document.getElementsByClassName("elemento");
-
-    for (const elemento of elementos) {
-        if (elemento.classList.contains(tipo)) {
-            elemento.classList.remove("selecionado");
+function limparCavaleiroSelect(tipo){
+    const persoSelecionado = document.getElementsByClassName("CardCavaleiros");
+    for (const personagem of persoSelecionado){
+        if(personagem.classList.contains(tipo)){
+            personagem.classList.remove("CavSelect");
         }
     }
 }
 
-function dadosRand() {
-     const min = Math.ceil(5);
-     const max = Math.floor(30);
-
-     return Math.floor(Math.random() * (max - min + 1)) + min;
+function calcularDano(){
+    if (!vidaPerson || !poderArma) {
+        alert("Selecione um personagem e uma arma para calcular o dano");
+        return;
+    }
+    const min = Math.ceil(24);
+    const max = Math.floor(37);
+    const danoAleatorio = Math.floor(Math.random() * (max - min + 11)) + min;
+    const danoTotal = danoAleatorio + (vidaPerson - poderArma);
+    let resultado = "Dano " + danoTotal + ".";
+    if(danoTotal < vidaPerson){
+        resultado += " Que pena... você não derrotou o cavaleiro. Tente novamente."
+    }else{
+        resultado += " Este ataque foi fatal! Você derrotou o cavaleiro."
+    }
+    document.getElementById("dano").innerText = resultado
 }
-
